@@ -192,6 +192,26 @@ Type::build('timestamp')
  * table, model, controller names or whatever other string is passed to the
  * inflection functions.
  */
+Inflector::rules('singular', [  '/(.*)res$/i' => '\1r', 
+                                '/(.*)nes$/i' => '\1n', 
+                                '/(.*)des$/i' => '\1d', 
+                                '/(.*)ses$/i' => '\1s',
+                                '/(perfil)es$/i' => '\1',
+                                '/(user)s$/i' => '\1',
+                            ]
+                );
+
+Inflector::rules('plural',   [  '/(.*)r$/i' => '\1res', 
+                                '/(.*)n$/i' => '\1nes', 
+                                '/(.*)d$/i' => '\1des', 
+                                '/(.*)s$/i' => '\1ses',
+                                '/(perfil)$/i' => '\1es',
+                                '/(user)$/i' => '\1s',
+                            ]
+                );
+                
+Inflector::rules('irregular', ['envase' => 'envases']);
+
 //Inflector::rules('plural', ['/^(inflect)or$/i' => '\1ables']);
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
