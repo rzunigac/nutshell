@@ -17,7 +17,7 @@
 </nav>
 <div class="variedades view large-9 medium-8 columns content">
     <h3><?= h($variedad->idvariedades) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Idvariedades') ?></th>
             <td><?= $this->Number->format($variedad->idvariedades) ?></td>
@@ -26,7 +26,7 @@
     <div class="related">
         <h4><?= __('Related Lotes') ?></h4>
         <?php if (!empty($variedad->lotes)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Recepcion Id') ?></th>

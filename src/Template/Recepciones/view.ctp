@@ -21,7 +21,7 @@
 </nav>
 <div class="recepciones view large-9 medium-8 columns content">
     <h3><?= h($recepcion->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Guia Productor') ?></th>
             <td><?= h($recepcion->guia_productor) ?></td>
@@ -62,7 +62,7 @@
     <div class="related">
         <h4><?= __('Related Lotes') ?></h4>
         <?php if (!empty($recepcion->lotes)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Recepcion Id') ?></th>

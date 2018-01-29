@@ -19,7 +19,7 @@
 </nav>
 <div class="despachoAPartidos view large-9 medium-8 columns content">
     <h3><?= h($despachoAPartido->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Planta') ?></th>
             <td><?= $despachoAPartido->has('planta') ? $this->Html->link($despachoAPartido->planta->id, ['controller' => 'Plantas', 'action' => 'view', $despachoAPartido->planta->id]) : '' ?></td>
@@ -56,7 +56,7 @@
     <div class="related">
         <h4><?= __('Related Filas') ?></h4>
         <?php if (!empty($despachoAPartido->filas)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Despacho A Partido Id') ?></th>

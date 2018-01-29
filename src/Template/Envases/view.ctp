@@ -21,7 +21,7 @@
 </nav>
 <div class="envases view large-9 medium-8 columns content">
     <h3><?= h($envase->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($envase->id) ?></td>
@@ -30,7 +30,7 @@
     <div class="related">
         <h4><?= __('Related Ensacados') ?></h4>
         <?php if (!empty($envase->ensacados)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Lote Id') ?></th>
@@ -61,7 +61,7 @@
     <div class="related">
         <h4><?= __('Related Filas') ?></h4>
         <?php if (!empty($envase->filas)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Despacho A Partido Id') ?></th>
@@ -88,7 +88,7 @@
     <div class="related">
         <h4><?= __('Related Lotes') ?></h4>
         <?php if (!empty($envase->lotes)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Recepcion Id') ?></th>

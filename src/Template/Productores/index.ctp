@@ -14,7 +14,7 @@
 </nav>
 <div class="productores index large-9 medium-8 columns content">
     <h3><?= __('Productores') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table class="table " cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>

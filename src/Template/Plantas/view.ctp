@@ -15,7 +15,7 @@
 </nav>
 <div class="plantas view large-9 medium-8 columns content">
     <h3><?= h($planta->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Nombre') ?></th>
             <td><?= h($planta->nombre) ?></td>

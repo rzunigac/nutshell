@@ -17,7 +17,7 @@
 </nav>
 <div class="productores view large-9 medium-8 columns content">
     <h3><?= h($productor->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($productor->id) ?></td>
@@ -26,7 +26,7 @@
     <div class="related">
         <h4><?= __('Related Recepciones') ?></h4>
         <?php if (!empty($productor->recepciones)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Guia Productor') ?></th>

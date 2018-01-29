@@ -21,7 +21,7 @@
 </nav>
 <div class="filaRecepciones view large-9 medium-8 columns content">
     <h3><?= h($filaRecepcion->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Recepcion Partido') ?></th>
             <td><?= $filaRecepcion->has('recepcion_partido') ? $this->Html->link($filaRecepcion->recepcion_partido->id, ['controller' => 'RecepcionPartidos', 'action' => 'view', $filaRecepcion->recepcion_partido->id]) : '' ?></td>

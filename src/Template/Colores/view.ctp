@@ -15,7 +15,7 @@
 </nav>
 <div class="colores view large-9 medium-8 columns content">
     <h3><?= h($color->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Nombre') ?></th>
             <td><?= h($color->nombre) ?></td>

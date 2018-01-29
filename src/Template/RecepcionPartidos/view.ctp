@@ -17,7 +17,7 @@
 </nav>
 <div class="recepcionPartidos view large-9 medium-8 columns content">
     <h3><?= h($recepcionPartido->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Numero De Guia') ?></th>
             <td><?= h($recepcionPartido->numero_de_guia) ?></td>

@@ -25,7 +25,7 @@
 </nav>
 <div class="lotes view large-9 medium-8 columns content">
     <h3><?= h($lote->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table vertical-table">
         <tr>
             <th scope="row"><?= __('Recepcion') ?></th>
             <td><?= $lote->has('recepcion') ? $this->Html->link($lote->recepcion->id, ['controller' => 'Recepciones', 'action' => 'view', $lote->recepcion->id]) : '' ?></td>
@@ -66,7 +66,7 @@
     <div class="related">
         <h4><?= __('Related Ensacados') ?></h4>
         <?php if (!empty($lote->ensacados)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table " cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Lote Id') ?></th>
