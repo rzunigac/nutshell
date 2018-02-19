@@ -23,6 +23,8 @@
     <fieldset>
         <legend><?= __('Edit Variedad') ?></legend>
         <?php
+            echo $this->Form->control('id');
+            echo $this->Form->control('nombre');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

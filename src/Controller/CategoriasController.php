@@ -35,7 +35,7 @@ class CategoriasController extends AppController
     public function view($id = null)
     {
         $categoria = $this->Categorias->get($id, [
-            'contain' => []
+            'contain' => ['FilaRecepciones', 'IngresoAPacking', 'SalidaPacking']
         ]);
 
         $this->set('categoria', $categoria);

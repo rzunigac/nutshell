@@ -33,8 +33,8 @@ class VariedadesTable extends Table
         parent::initialize($config);
 
         $this->setTable('variedades');
-        $this->setDisplayField('idvariedades');
-        $this->setPrimaryKey('idvariedades');
+        $this->setDisplayField('nombre');
+        $this->setPrimaryKey('id');
 
         $this->hasMany('Lotes', [
             'foreignKey' => 'variedad_id'
@@ -50,8 +50,13 @@ class VariedadesTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('idvariedades')
-            ->allowEmpty('idvariedades', 'create');
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('nombre')
+            ->maxLength('nombre', 45)
+            ->allowEmpty('nombre');
 
         return $validator;
     }

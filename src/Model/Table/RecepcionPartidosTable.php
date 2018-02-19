@@ -11,6 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\PlantasTable|\Cake\ORM\Association\BelongsTo $Plantas
  * @property \App\Model\Table\PlantasTable|\Cake\ORM\Association\BelongsTo $Plantas
+ * @property |\Cake\ORM\Association\HasMany $FilaRecepciones
  *
  * @method \App\Model\Entity\RecepcionPartido get($primaryKey, $options = [])
  * @method \App\Model\Entity\RecepcionPartido newEntity($data = null, array $options = [])
@@ -44,6 +45,9 @@ class RecepcionPartidosTable extends Table
         $this->belongsTo('Plantas', [
             'foreignKey' => 'planta_destino_id',
             'joinType' => 'INNER'
+        ]);
+        $this->hasMany('FilaRecepciones', [
+            'foreignKey' => 'recepcion_partido_id'
         ]);
     }
 

@@ -14,10 +14,11 @@
 </nav>
 <div class="productores index large-9 medium-8 columns content">
     <h3><?= __('Productores') ?></h3>
-    <table class="table " cellpadding="0" cellspacing="0">
+    <table class="table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
             <?php foreach ($productores as $productor): ?>
             <tr>
                 <td><?= $this->Number->format($productor->id) ?></td>
+                <td><?= h($productor->nombre) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $productor->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $productor->id]) ?>

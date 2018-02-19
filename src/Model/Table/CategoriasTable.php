@@ -9,6 +9,10 @@ use Cake\Validation\Validator;
 /**
  * Categorias Model
  *
+ * @property |\Cake\ORM\Association\HasMany $FilaRecepciones
+ * @property |\Cake\ORM\Association\HasMany $IngresoAPacking
+ * @property |\Cake\ORM\Association\HasMany $SalidaPacking
+ *
  * @method \App\Model\Entity\Categoria get($primaryKey, $options = [])
  * @method \App\Model\Entity\Categoria newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Categoria[] newEntities(array $data, array $options = [])
@@ -33,6 +37,16 @@ class CategoriasTable extends Table
         $this->setTable('categorias');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('FilaRecepciones', [
+            'foreignKey' => 'categoria_id'
+        ]);
+        $this->hasMany('IngresoAPacking', [
+            'foreignKey' => 'categoria_id'
+        ]);
+        $this->hasMany('SalidaPacking', [
+            'foreignKey' => 'categoria_id'
+        ]);
     }
 
     /**

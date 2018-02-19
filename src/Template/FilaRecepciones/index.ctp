@@ -14,19 +14,22 @@
         <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Colores'), ['controller' => 'Colores', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Color'), ['controller' => 'Colores', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Lotes'), ['controller' => 'Lotes', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Lote'), ['controller' => 'Lotes', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="filaRecepciones index large-9 medium-8 columns content">
     <h3><?= __('Fila Recepciones') ?></h3>
-    <table class="table " cellpadding="0" cellspacing="0">
+    <table class="table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('recepcion_partidos_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('categorias_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('colores_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('recepcion_partido_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('categoria_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('color_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('bin_destino') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('kg') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('lote_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -39,6 +42,7 @@
                 <td><?= $filaRecepcion->has('color') ? $this->Html->link($filaRecepcion->color->id, ['controller' => 'Colores', 'action' => 'view', $filaRecepcion->color->id]) : '' ?></td>
                 <td><?= h($filaRecepcion->bin_destino) ?></td>
                 <td><?= $this->Number->format($filaRecepcion->kg) ?></td>
+                <td><?= $filaRecepcion->has('lote') ? $this->Html->link($filaRecepcion->lote->id, ['controller' => 'Lotes', 'action' => 'view', $filaRecepcion->lote->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $filaRecepcion->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $filaRecepcion->id]) ?>

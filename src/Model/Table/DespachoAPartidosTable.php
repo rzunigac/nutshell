@@ -84,6 +84,11 @@ class DespachoAPartidosTable extends Table
             ->maxLength('observaciones', 45)
             ->allowEmpty('observaciones');
 
+        $validator
+            ->scalar('manual')
+            ->maxLength('manual', 45)
+            ->allowEmpty('manual');
+
         return $validator;
     }
 

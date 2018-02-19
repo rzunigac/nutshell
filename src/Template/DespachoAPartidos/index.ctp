@@ -16,7 +16,7 @@
 </nav>
 <div class="despachoAPartidos index large-9 medium-8 columns content">
     <h3><?= __('Despacho A Partidos') ?></h3>
-    <table class="table " cellpadding="0" cellspacing="0">
+    <table class="table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -27,6 +27,7 @@
                 <th scope="col"><?= $this->Paginator->sort('conductor') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('patente') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('manual') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -41,6 +42,7 @@
                 <td><?= h($despachoAPartido->conductor) ?></td>
                 <td><?= h($despachoAPartido->patente) ?></td>
                 <td><?= h($despachoAPartido->observaciones) ?></td>
+                <td><?= h($despachoAPartido->manual) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $despachoAPartido->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $despachoAPartido->id]) ?>

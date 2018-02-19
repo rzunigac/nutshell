@@ -7,11 +7,12 @@ use Cake\ORM\Entity;
  * FilaRecepcion Entity
  *
  * @property int $id
- * @property int $recepcion_partidos_id
- * @property int $categorias_id
- * @property int $colores_id
+ * @property int $recepcion_partido_id
+ * @property int $categoria_id
+ * @property int $color_id
  * @property string $bin_destino
  * @property float $kg
+ * @property int $lote_id
  *
  * @property \App\Model\Entity\RecepcionPartido $recepcion_partido
  * @property \App\Model\Entity\Categoria $categoria
@@ -30,11 +31,12 @@ class FilaRecepcion extends Entity
      * @var array
      */
     protected $_accessible = [
-        'recepcion_partidos_id' => true,
-        'categorias_id' => true,
-        'colores_id' => true,
+        'recepcion_partido_id' => true,
+        'categoria_id' => true,
+        'color_id' => true,
         'bin_destino' => true,
         'kg' => true,
+        'lote_id' => true,
         'recepcion_partido' => true,
         'categoria' => true,
         'color' => true

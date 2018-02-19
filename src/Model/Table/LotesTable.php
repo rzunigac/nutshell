@@ -13,7 +13,11 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\VariedadesTable|\Cake\ORM\Association\BelongsTo $Variedades
  * @property \App\Model\Table\EnvasesTable|\Cake\ORM\Association\BelongsTo $Envases
  * @property \App\Model\Table\FilasTable|\Cake\ORM\Association\BelongsTo $Filas
+ * @property |\Cake\ORM\Association\BelongsTo $Decisiones
+ * @property |\Cake\ORM\Association\HasMany $ControlDeCalidad
  * @property \App\Model\Table\EnsacadosTable|\Cake\ORM\Association\HasMany $Ensacados
+ * @property |\Cake\ORM\Association\HasMany $FilaRecepciones
+ * @property |\Cake\ORM\Association\HasMany $IngresoAPacking
  *
  * @method \App\Model\Entity\Lote get($primaryKey, $options = [])
  * @method \App\Model\Entity\Lote newEntity($data = null, array $options = [])
@@ -56,7 +60,20 @@ class LotesTable extends Table
             'foreignKey' => 'filas_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('Decisiones', [
+            'foreignKey' => 'decision_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->hasMany('ControlDeCalidad', [
+            'foreignKey' => 'lote_id'
+        ]);
         $this->hasMany('Ensacados', [
+            'foreignKey' => 'lote_id'
+        ]);
+        $this->hasMany('FilaRecepciones', [
+            'foreignKey' => 'lote_id'
+        ]);
+        $this->hasMany('IngresoAPacking', [
             'foreignKey' => 'lote_id'
         ]);
     }
@@ -104,6 +121,7 @@ class LotesTable extends Table
         $rules->add($rules->existsIn(['variedad_id'], 'Variedades'));
         $rules->add($rules->existsIn(['envase_id'], 'Envases'));
         $rules->add($rules->existsIn(['filas_id'], 'Filas'));
+        $rules->add($rules->existsIn(['decision_id'], 'Decisiones'));
 
         return $rules;
     }

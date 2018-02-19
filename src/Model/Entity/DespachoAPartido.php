@@ -14,6 +14,7 @@ use Cake\ORM\Entity;
  * @property string $conductor
  * @property string $patente
  * @property string $observaciones
+ * @property string $manual
  *
  * @property \App\Model\Entity\Planta $planta
  * @property \App\Model\Entity\Fila[] $filas
@@ -38,6 +39,7 @@ class DespachoAPartido extends Entity
         'conductor' => true,
         'patente' => true,
         'observaciones' => true,
+        'manual' => true,
         'planta' => true,
         'filas' => true
     ];

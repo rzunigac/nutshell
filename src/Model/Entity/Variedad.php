@@ -6,7 +6,8 @@ use Cake\ORM\Entity;
 /**
  * Variedad Entity
  *
- * @property int $idvariedades
+ * @property int $id
+ * @property string $nombre
  *
  * @property \App\Model\Entity\Lote[] $lotes
  */
@@ -23,6 +24,7 @@ class Variedad extends Entity
      * @var array
      */
     protected $_accessible = [
+        'nombre' => true,
         'lotes' => true
     ];
 }

@@ -21,7 +21,7 @@ class LotesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Recepciones', 'Variedades', 'Envases', 'Filas']
+            'contain' => ['Recepciones', 'Variedades', 'Envases', 'Filas', 'Decisiones']
         ];
         $lotes = $this->paginate($this->Lotes);
 
@@ -38,7 +38,7 @@ class LotesController extends AppController
     public function view($id = null)
     {
         $lote = $this->Lotes->get($id, [
-            'contain' => ['Recepciones', 'Variedades', 'Envases', 'Filas', 'Ensacados']
+            'contain' => ['Recepciones', 'Variedades', 'Envases', 'Filas', 'Decisiones', 'ControlDeCalidad', 'Ensacados', 'FilaRecepciones', 'IngresoAPacking']
         ]);
 
         $this->set('lote', $lote);
@@ -65,7 +65,8 @@ class LotesController extends AppController
         $variedades = $this->Lotes->Variedades->find('list', ['limit' => 200]);
         $envases = $this->Lotes->Envases->find('list', ['limit' => 200]);
         $filas = $this->Lotes->Filas->find('list', ['limit' => 200]);
-        $this->set(compact('lote', 'recepciones', 'variedades', 'envases', 'filas'));
+        $decisiones = $this->Lotes->Decisiones->find('list', ['limit' => 200]);
+        $this->set(compact('lote', 'recepciones', 'variedades', 'envases', 'filas', 'decisiones'));
     }
 
     /**
@@ -93,7 +94,8 @@ class LotesController extends AppController
         $variedades = $this->Lotes->Variedades->find('list', ['limit' => 200]);
         $envases = $this->Lotes->Envases->find('list', ['limit' => 200]);
         $filas = $this->Lotes->Filas->find('list', ['limit' => 200]);
-        $this->set(compact('lote', 'recepciones', 'variedades', 'envases', 'filas'));
+        $decisiones = $this->Lotes->Decisiones->find('list', ['limit' => 200]);
+        $this->set(compact('lote', 'recepciones', 'variedades', 'envases', 'filas', 'decisiones'));
     }
 
     /**

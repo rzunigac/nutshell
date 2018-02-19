@@ -32,6 +32,7 @@
             echo $this->Form->control('conductor');
             echo $this->Form->control('patente');
             echo $this->Form->control('observaciones');
+            echo $this->Form->control('manual');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

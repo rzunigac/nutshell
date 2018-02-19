@@ -35,7 +35,7 @@ class ColoresController extends AppController
     public function view($id = null)
     {
         $color = $this->Colores->get($id, [
-            'contain' => []
+            'contain' => ['FilaRecepciones', 'IngresoAPacking', 'SalidaPacking']
         ]);
 
         $this->set('color', $color);

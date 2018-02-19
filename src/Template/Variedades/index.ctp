@@ -14,17 +14,19 @@
 </nav>
 <div class="variedades index large-9 medium-8 columns content">
     <h3><?= __('Variedades') ?></h3>
-    <table class="table " cellpadding="0" cellspacing="0">
+    <table class="table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('idvariedades') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($variedades as $variedad): ?>
             <tr>
-                <td><?= $this->Number->format($variedad->idvariedades) ?></td>
+                <td><?= $this->Number->format($variedad->id) ?></td>
+                <td><?= h($variedad->nombre) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $variedad->idvariedades]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $variedad->idvariedades]) ?>

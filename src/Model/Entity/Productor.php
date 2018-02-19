@@ -7,6 +7,7 @@ use Cake\ORM\Entity;
  * Productor Entity
  *
  * @property int $id
+ * @property string $nombre
  *
  * @property \App\Model\Entity\Recepcion[] $recepciones
  */
@@ -23,6 +24,7 @@ class Productor extends Entity
      * @var array
      */
     protected $_accessible = [
+        'nombre' => true,
         'recepciones' => true
     ];
 }

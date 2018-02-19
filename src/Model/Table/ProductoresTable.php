@@ -53,6 +53,11 @@ class ProductoresTable extends Table
             ->integer('id')
             ->allowEmpty('id', 'create');
 
+        $validator
+            ->scalar('nombre')
+            ->maxLength('nombre', 45)
+            ->allowEmpty('nombre');
+
         return $validator;
     }
 }

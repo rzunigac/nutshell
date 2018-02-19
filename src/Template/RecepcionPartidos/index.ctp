@@ -10,11 +10,13 @@
         <li><?= $this->Html->link(__('New Recepcion Partido'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Plantas'), ['controller' => 'Plantas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Planta'), ['controller' => 'Plantas', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Fila Recepciones'), ['controller' => 'FilaRecepciones', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Fila Recepcion'), ['controller' => 'FilaRecepciones', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="recepcionPartidos index large-9 medium-8 columns content">
     <h3><?= __('Recepcion Partidos') ?></h3>
-    <table class="table " cellpadding="0" cellspacing="0">
+    <table class="table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>

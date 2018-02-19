@@ -9,6 +9,10 @@ use Cake\Validation\Validator;
 /**
  * Colores Model
  *
+ * @property |\Cake\ORM\Association\HasMany $FilaRecepciones
+ * @property |\Cake\ORM\Association\HasMany $IngresoAPacking
+ * @property |\Cake\ORM\Association\HasMany $SalidaPacking
+ *
  * @method \App\Model\Entity\Color get($primaryKey, $options = [])
  * @method \App\Model\Entity\Color newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Color[] newEntities(array $data, array $options = [])
@@ -33,6 +37,16 @@ class ColoresTable extends Table
         $this->setTable('colores');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('FilaRecepciones', [
+            'foreignKey' => 'color_id'
+        ]);
+        $this->hasMany('IngresoAPacking', [
+            'foreignKey' => 'color_id'
+        ]);
+        $this->hasMany('SalidaPacking', [
+            'foreignKey' => 'color_id'
+        ]);
     }
 
     /**

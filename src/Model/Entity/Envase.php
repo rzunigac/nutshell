@@ -7,6 +7,8 @@ use Cake\ORM\Entity;
  * Envase Entity
  *
  * @property int $id
+ * @property string $nombre
+ * @property float $kg
  *
  * @property \App\Model\Entity\Ensacado[] $ensacados
  * @property \App\Model\Entity\Fila[] $filas
@@ -25,6 +27,8 @@ class Envase extends Entity
      * @var array
      */
     protected $_accessible = [
+        'nombre' => true,
+        'kg' => true,
         'ensacados' => true,
         'filas' => true,
         'lotes' => true

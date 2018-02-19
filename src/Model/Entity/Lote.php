@@ -15,6 +15,7 @@ use Cake\ORM\Entity;
  * @property float $porcentaje_esperado_de_partido
  * @property int $cerrado
  * @property int $filas_id
+ * @property int $decision_id
  *
  * @property \App\Model\Entity\Recepcion $recepcion
  * @property \App\Model\Entity\Variedad $variedad
@@ -43,6 +44,7 @@ class Lote extends Entity
         'porcentaje_esperado_de_partido' => true,
         'cerrado' => true,
         'filas_id' => true,
+        'decision_id' => true,
         'recepcion' => true,
         'variedad' => true,
         'envase' => true,

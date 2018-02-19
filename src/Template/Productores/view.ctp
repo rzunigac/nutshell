@@ -19,6 +19,10 @@
     <h3><?= h($productor->id) ?></h3>
     <table class="table vertical-table">
         <tr>
+            <th scope="row"><?= __('Nombre') ?></th>
+            <td><?= h($productor->nombre) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($productor->id) ?></td>
         </tr>
@@ -26,7 +30,7 @@
     <div class="related">
         <h4><?= __('Related Recepciones') ?></h4>
         <?php if (!empty($productor->recepciones)): ?>
-        <table class="table " cellpadding="0" cellspacing="0">
+        <table class="table" cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Guia Productor') ?></th>

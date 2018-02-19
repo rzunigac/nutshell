@@ -62,7 +62,7 @@
     <div class="related">
         <h4><?= __('Related Lotes') ?></h4>
         <?php if (!empty($recepcion->lotes)): ?>
-        <table class="table " cellpadding="0" cellspacing="0">
+        <table class="table" cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Recepcion Id') ?></th>
@@ -73,6 +73,7 @@
                 <th scope="col"><?= __('Porcentaje Esperado De Partido') ?></th>
                 <th scope="col"><?= __('Cerrado') ?></th>
                 <th scope="col"><?= __('Filas Id') ?></th>
+                <th scope="col"><?= __('Decision Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($recepcion->lotes as $lotes): ?>
@@ -86,6 +87,7 @@
                 <td><?= h($lotes->porcentaje_esperado_de_partido) ?></td>
                 <td><?= h($lotes->cerrado) ?></td>
                 <td><?= h($lotes->filas_id) ?></td>
+                <td><?= h($lotes->decision_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Lotes', 'action' => 'view', $lotes->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Lotes', 'action' => 'edit', $lotes->id]) ?>

@@ -23,6 +23,7 @@
     <fieldset>
         <legend><?= __('Edit Productor') ?></legend>
         <?php
+            echo $this->Form->control('nombre');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

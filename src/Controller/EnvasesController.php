@@ -35,7 +35,7 @@ class EnvasesController extends AppController
     public function view($id = null)
     {
         $envase = $this->Envases->get($id, [
-            'contain' => ['Ensacados', 'Filas', 'Lotes']
+            'contain' => ['Ensacados', 'Filas', 'Lotes', 'SalidaPacking']
         ]);
 
         $this->set('envase', $envase);

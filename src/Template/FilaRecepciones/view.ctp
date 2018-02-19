@@ -17,6 +17,8 @@
         <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Colores'), ['controller' => 'Colores', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Color'), ['controller' => 'Colores', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Lotes'), ['controller' => 'Lotes', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Lote'), ['controller' => 'Lotes', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="filaRecepciones view large-9 medium-8 columns content">
@@ -37,6 +39,10 @@
         <tr>
             <th scope="row"><?= __('Bin Destino') ?></th>
             <td><?= h($filaRecepcion->bin_destino) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Lote') ?></th>
+            <td><?= $filaRecepcion->has('lote') ? $this->Html->link($filaRecepcion->lote->id, ['controller' => 'Lotes', 'action' => 'view', $filaRecepcion->lote->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

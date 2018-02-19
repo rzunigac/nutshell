@@ -17,6 +17,7 @@
     <fieldset>
         <legend><?= __('Add Productor') ?></legend>
         <?php
+            echo $this->Form->control('nombre');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

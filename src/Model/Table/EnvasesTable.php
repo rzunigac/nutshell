@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\EnsacadosTable|\Cake\ORM\Association\HasMany $Ensacados
  * @property \App\Model\Table\FilasTable|\Cake\ORM\Association\HasMany $Filas
  * @property \App\Model\Table\LotesTable|\Cake\ORM\Association\HasMany $Lotes
+ * @property |\Cake\ORM\Association\HasMany $SalidaPacking
  *
  * @method \App\Model\Entity\Envase get($primaryKey, $options = [])
  * @method \App\Model\Entity\Envase newEntity($data = null, array $options = [])
@@ -35,7 +36,7 @@ class EnvasesTable extends Table
         parent::initialize($config);
 
         $this->setTable('envases');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nombre');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Ensacados', [
@@ -45,6 +46,9 @@ class EnvasesTable extends Table
             'foreignKey' => 'envase_id'
         ]);
         $this->hasMany('Lotes', [
+            'foreignKey' => 'envase_id'
+        ]);
+        $this->hasMany('SalidaPacking', [
             'foreignKey' => 'envase_id'
         ]);
     }
@@ -60,6 +64,15 @@ class EnvasesTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('nombre')
+            ->maxLength('nombre', 45)
+            ->allowEmpty('nombre');
+
+        $validator
+            ->numeric('kg')
+            ->allowEmpty('kg');
 
         return $validator;
     }

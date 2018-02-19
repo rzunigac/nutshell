@@ -16,13 +16,21 @@
         <li><?= $this->Html->link(__('New Envase'), ['controller' => 'Envases', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Filas'), ['controller' => 'Filas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Fila'), ['controller' => 'Filas', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Decisiones'), ['controller' => 'Decisiones', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Decision'), ['controller' => 'Decisiones', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Control De Calidad'), ['controller' => 'ControlDeCalidad', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Control De Calidad'), ['controller' => 'ControlDeCalidad', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Ensacados'), ['controller' => 'Ensacados', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Ensacado'), ['controller' => 'Ensacados', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Fila Recepciones'), ['controller' => 'FilaRecepciones', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Fila Recepcion'), ['controller' => 'FilaRecepciones', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Ingreso A Packing'), ['controller' => 'IngresoAPacking', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Ingreso A Packing'), ['controller' => 'IngresoAPacking', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="lotes index large-9 medium-8 columns content">
     <h3><?= __('Lotes') ?></h3>
-    <table class="table " cellpadding="0" cellspacing="0">
+    <table class="table" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -34,6 +42,7 @@
                 <th scope="col"><?= $this->Paginator->sort('porcentaje_esperado_de_partido') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cerrado') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('filas_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('decision_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -49,6 +58,7 @@
                 <td><?= $this->Number->format($lote->porcentaje_esperado_de_partido) ?></td>
                 <td><?= $this->Number->format($lote->cerrado) ?></td>
                 <td><?= $lote->has('fila') ? $this->Html->link($lote->fila->id, ['controller' => 'Filas', 'action' => 'view', $lote->fila->id]) : '' ?></td>
+                <td><?= $lote->has('decision') ? $this->Html->link($lote->decision->id, ['controller' => 'Decisiones', 'action' => 'view', $lote->decision->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $lote->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $lote->id]) ?>

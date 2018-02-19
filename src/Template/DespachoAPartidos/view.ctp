@@ -37,6 +37,10 @@
             <td><?= h($despachoAPartido->observaciones) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Manual') ?></th>
+            <td><?= h($despachoAPartido->manual) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($despachoAPartido->id) ?></td>
         </tr>
@@ -56,7 +60,7 @@
     <div class="related">
         <h4><?= __('Related Filas') ?></h4>
         <?php if (!empty($despachoAPartido->filas)): ?>
-        <table class="table " cellpadding="0" cellspacing="0">
+        <table class="table" cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Despacho A Partido Id') ?></th>

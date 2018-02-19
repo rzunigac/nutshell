@@ -20,6 +20,8 @@
         <li><?= $this->Html->link(__('New Fila'), ['controller' => 'Filas', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Lotes'), ['controller' => 'Lotes', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Lote'), ['controller' => 'Lotes', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Salida Packing'), ['controller' => 'SalidaPacking', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Salida Packing'), ['controller' => 'SalidaPacking', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="envases form large-9 medium-8 columns content">
@@ -27,6 +29,8 @@
     <fieldset>
         <legend><?= __('Edit Envase') ?></legend>
         <?php
+            echo $this->Form->control('nombre');
+            echo $this->Form->control('kg');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

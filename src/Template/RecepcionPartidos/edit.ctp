@@ -16,6 +16,8 @@
         <li><?= $this->Html->link(__('List Recepcion Partidos'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Plantas'), ['controller' => 'Plantas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Planta'), ['controller' => 'Plantas', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Fila Recepciones'), ['controller' => 'FilaRecepciones', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Fila Recepcion'), ['controller' => 'FilaRecepciones', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="recepcionPartidos form large-9 medium-8 columns content">

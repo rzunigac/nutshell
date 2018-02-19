@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\RecepcionPartidosTable|\Cake\ORM\Association\BelongsTo $RecepcionPartidos
  * @property \App\Model\Table\CategoriasTable|\Cake\ORM\Association\BelongsTo $Categorias
  * @property \App\Model\Table\ColoresTable|\Cake\ORM\Association\BelongsTo $Colores
+ * @property |\Cake\ORM\Association\BelongsTo $Lotes
  *
  * @method \App\Model\Entity\FilaRecepcion get($primaryKey, $options = [])
  * @method \App\Model\Entity\FilaRecepcion newEntity($data = null, array $options = [])
@@ -39,15 +40,19 @@ class FilaRecepcionesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->belongsTo('RecepcionPartidos', [
-            'foreignKey' => 'recepcion_partidos_id',
+            'foreignKey' => 'recepcion_partido_id',
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Categorias', [
-            'foreignKey' => 'categorias_id',
+            'foreignKey' => 'categoria_id',
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Colores', [
-            'foreignKey' => 'colores_id',
+            'foreignKey' => 'color_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Lotes', [
+            'foreignKey' => 'lote_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -85,9 +90,10 @@ class FilaRecepcionesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['recepcion_partidos_id'], 'RecepcionPartidos'));
-        $rules->add($rules->existsIn(['categorias_id'], 'Categorias'));
-        $rules->add($rules->existsIn(['colores_id'], 'Colores'));
+        $rules->add($rules->existsIn(['recepcion_partido_id'], 'RecepcionPartidos'));
+        $rules->add($rules->existsIn(['categoria_id'], 'Categorias'));
+        $rules->add($rules->existsIn(['color_id'], 'Colores'));
+        $rules->add($rules->existsIn(['lote_id'], 'Lotes'));
 
         return $rules;
     }

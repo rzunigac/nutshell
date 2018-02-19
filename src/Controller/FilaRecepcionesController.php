@@ -21,7 +21,7 @@ class FilaRecepcionesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['RecepcionPartidos', 'Categorias', 'Colores']
+            'contain' => ['RecepcionPartidos', 'Categorias', 'Colores', 'Lotes']
         ];
         $filaRecepciones = $this->paginate($this->FilaRecepciones);
 
@@ -38,7 +38,7 @@ class FilaRecepcionesController extends AppController
     public function view($id = null)
     {
         $filaRecepcion = $this->FilaRecepciones->get($id, [
-            'contain' => ['RecepcionPartidos', 'Categorias', 'Colores']
+            'contain' => ['RecepcionPartidos', 'Categorias', 'Colores', 'Lotes']
         ]);
 
         $this->set('filaRecepcion', $filaRecepcion);
@@ -64,7 +64,8 @@ class FilaRecepcionesController extends AppController
         $recepcionPartidos = $this->FilaRecepciones->RecepcionPartidos->find('list', ['limit' => 200]);
         $categorias = $this->FilaRecepciones->Categorias->find('list', ['limit' => 200]);
         $colores = $this->FilaRecepciones->Colores->find('list', ['limit' => 200]);
-        $this->set(compact('filaRecepcion', 'recepcionPartidos', 'categorias', 'colores'));
+        $lotes = $this->FilaRecepciones->Lotes->find('list', ['limit' => 200]);
+        $this->set(compact('filaRecepcion', 'recepcionPartidos', 'categorias', 'colores', 'lotes'));
     }
 
     /**
@@ -91,7 +92,8 @@ class FilaRecepcionesController extends AppController
         $recepcionPartidos = $this->FilaRecepciones->RecepcionPartidos->find('list', ['limit' => 200]);
         $categorias = $this->FilaRecepciones->Categorias->find('list', ['limit' => 200]);
         $colores = $this->FilaRecepciones->Colores->find('list', ['limit' => 200]);
-        $this->set(compact('filaRecepcion', 'recepcionPartidos', 'categorias', 'colores'));
+        $lotes = $this->FilaRecepciones->Lotes->find('list', ['limit' => 200]);
+        $this->set(compact('filaRecepcion', 'recepcionPartidos', 'categorias', 'colores', 'lotes'));
     }
 
     /**

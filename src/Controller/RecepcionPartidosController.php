@@ -38,7 +38,7 @@ class RecepcionPartidosController extends AppController
     public function view($id = null)
     {
         $recepcionPartido = $this->RecepcionPartidos->get($id, [
-            'contain' => ['Plantas']
+            'contain' => ['Plantas', 'FilaRecepciones']
         ]);
 
         $this->set('recepcionPartido', $recepcionPartido);
