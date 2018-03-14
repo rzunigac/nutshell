@@ -70,7 +70,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     
     <?= $this->Flash->render() ?>
     
-    <div class="container-fluid">
+    <div class="container">
         <?= $this->fetch('content') ?>
     </div>
     
