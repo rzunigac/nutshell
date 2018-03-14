@@ -31,7 +31,7 @@ class PlantasTable extends Table
         parent::initialize($config);
 
         $this->setTable('plantas');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nombre');
         $this->setPrimaryKey('id');
     }
 

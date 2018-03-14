@@ -33,7 +33,7 @@ class ProductoresTable extends Table
         parent::initialize($config);
 
         $this->setTable('productores');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nombre');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Recepciones', [

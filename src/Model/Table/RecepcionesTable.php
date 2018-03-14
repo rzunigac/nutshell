@@ -35,7 +35,7 @@ class RecepcionesTable extends Table
         parent::initialize($config);
 
         $this->setTable('recepciones');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nombre');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Productores', [
