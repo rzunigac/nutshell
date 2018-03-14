@@ -38,9 +38,9 @@
             <tr>
                 <td><?= $this->Number->format($recepcion->id) ?></td>
                 <td><?= h($recepcion->guia_productor) ?></td>
-                <td><?= $recepcion->has('productor') ? $this->Html->link($recepcion->productor->id, ['controller' => 'Productores', 'action' => 'view', $recepcion->productor->id]) : '' ?></td>
+                <td><?= $recepcion->has('productor') ? $this->Html->link($recepcion->productor->nombre, ['controller' => 'Productores', 'action' => 'view', $recepcion->productor->id]) : '' ?></td>
                 <td><?= h($recepcion->sitio_origen) ?></td>
-                <td><?= $recepcion->has('planta') ? $this->Html->link($recepcion->planta->id, ['controller' => 'Plantas', 'action' => 'view', $recepcion->planta->id]) : '' ?></td>
+                <td><?= $recepcion->has('planta') ? $this->Html->link($recepcion->planta->nombre, ['controller' => 'Plantas', 'action' => 'view', $recepcion->planta->id]) : '' ?></td>
                 <td><?= h($recepcion->fecha) ?></td>
                 <td><?= h($recepcion->conductor) ?></td>
                 <td><?= h($recepcion->patente) ?></td>
