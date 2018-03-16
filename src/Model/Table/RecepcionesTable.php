@@ -66,7 +66,7 @@ class RecepcionesTable extends Table
         $validator
             ->scalar('guia_productor')
             ->maxLength('guia_productor', 45)
-            ->allowEmpty('guia_productor');
+            ->notEmpty('guia_productor', 'La guía no puede ser vacía');
 
         $validator
             ->scalar('sitio_origen')
@@ -75,7 +75,7 @@ class RecepcionesTable extends Table
 
         $validator
             ->dateTime('fecha')
-            ->allowEmpty('fecha');
+            ->notEmpty('fecha', 'La fecha no puede ser vacía');
 
         $validator
             ->scalar('conductor')
