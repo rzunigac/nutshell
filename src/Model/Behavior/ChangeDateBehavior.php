@@ -11,7 +11,7 @@ class ChangeDateBehavior extends Behavior
 	{	
 		
 		foreach($data as $name => $value){
-			//if(gettype($value) == 'string'){
+			if(gettype($value) == 'string'){
 				$name_pattern = '/^fecha*/';
 				if(preg_match($name_pattern, $name)){
 					$fecha = explode('-', $data[$name]);
@@ -24,7 +24,7 @@ class ChangeDateBehavior extends Behavior
 					];
 				$data[$name] = $array_fecha;
 				}
-			//}
+			}
 		}		
 	}
 }

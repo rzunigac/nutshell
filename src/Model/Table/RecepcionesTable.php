@@ -49,6 +49,8 @@ class RecepcionesTable extends Table
         $this->hasMany('Lotes', [
             'foreignKey' => 'recepcion_id'
         ]);
+        
+        $this->addBehavior('ChangeDate');
     }
 
     /**
@@ -109,4 +111,5 @@ class RecepcionesTable extends Table
 
         return $rules;
     }
+    
 }

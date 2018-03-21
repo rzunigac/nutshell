@@ -29,10 +29,22 @@
             <div class="form-row">
                 <?php 
                 echo $this->Form->input('guia_productor');
-                echo $this->Form->control('fecha', ['empty' => true]);
+                //echo $this->Form->control('fecha', ['empty' => true]);
+                echo $this->Form->control('fecha', [
+				'type' => 'calendario', 
+				'format' => 'd-m-Y', 
+				'default' => date('d-m-Y')
+				]);
                 ?>
+				<!-- div class="form-group col-md-6 date">
+					<label for="fecha">Fecha</label>
+					<input class="form-control calendario" type="text" name="fecha">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-th"></span>
+					</div>
+				</div --> 			
             </div>
-        
+                    
             <div class="form-row">
                 <?php
                 echo $this->Form->control('productor_id', ['options' => $productores]);
@@ -75,3 +87,4 @@
         </div>
     </div>
 </div>
+

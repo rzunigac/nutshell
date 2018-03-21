@@ -31,7 +31,14 @@
             echo $this->Form->control('productor_id', ['options' => $productores]);
             echo $this->Form->control('sitio_origen');
             echo $this->Form->control('planta_destino_id', ['options' => $plantas]);
-            echo $this->Form->control('fecha', ['empty' => true]);
+            //echo $this->Form->control('fecha', ['empty' => true]);
+            echo $this->Form->control('fecha', [
+				'type' => 'calendario', 
+				'format' => 'd-m-Y', 
+				'default' => date('d-m-Y'), 
+				'value' => !empty($recepcion->date) ? $recepcion->date->format('d-m-Y') : date('d-m-Y'),
+				]);
+
             echo $this->Form->control('conductor');
             echo $this->Form->control('patente');
             echo $this->Form->control('observaciones');
