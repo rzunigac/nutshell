@@ -21,7 +21,11 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Variedad $variedad
  * @property \App\Model\Entity\Envase $envase
  * @property \App\Model\Entity\Fila $fila
+ * @property \App\Model\Entity\Decision $decision
+ * @property \App\Model\Entity\ControlDeCalidad[] $control_de_calidad
  * @property \App\Model\Entity\Ensacado[] $ensacados
+ * @property \App\Model\Entity\FilaRecepcion[] $fila_recepciones
+ * @property \App\Model\Entity\IngresoAPacking[] $ingreso_a_packing
  */
 class Lote extends Entity
 {
@@ -49,6 +53,10 @@ class Lote extends Entity
         'variedad' => true,
         'envase' => true,
         'fila' => true,
-        'ensacados' => true
+        'decision' => true,
+        'control_de_calidad' => true,
+        'ensacados' => true,
+        'fila_recepciones' => true,
+        'ingreso_a_packing' => true
     ];
 }

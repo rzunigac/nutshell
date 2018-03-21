@@ -13,11 +13,11 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\VariedadesTable|\Cake\ORM\Association\BelongsTo $Variedades
  * @property \App\Model\Table\EnvasesTable|\Cake\ORM\Association\BelongsTo $Envases
  * @property \App\Model\Table\FilasTable|\Cake\ORM\Association\BelongsTo $Filas
- * @property |\Cake\ORM\Association\BelongsTo $Decisiones
- * @property |\Cake\ORM\Association\HasMany $ControlDeCalidad
+ * @property \App\Model\Table\DecisionesTable|\Cake\ORM\Association\BelongsTo $Decisiones
+ * @property \App\Model\Table\ControlDeCalidadTable|\Cake\ORM\Association\HasMany $ControlDeCalidad
  * @property \App\Model\Table\EnsacadosTable|\Cake\ORM\Association\HasMany $Ensacados
- * @property |\Cake\ORM\Association\HasMany $FilaRecepciones
- * @property |\Cake\ORM\Association\HasMany $IngresoAPacking
+ * @property \App\Model\Table\FilaRecepcionesTable|\Cake\ORM\Association\HasMany $FilaRecepciones
+ * @property \App\Model\Table\IngresoAPackingTable|\Cake\ORM\Association\HasMany $IngresoAPacking
  *
  * @method \App\Model\Entity\Lote get($primaryKey, $options = [])
  * @method \App\Model\Entity\Lote newEntity($data = null, array $options = [])
@@ -57,12 +57,10 @@ class LotesTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Filas', [
-            'foreignKey' => 'filas_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'filas_id'
         ]);
         $this->belongsTo('Decisiones', [
-            'foreignKey' => 'decision_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'decision_id'
         ]);
         $this->hasMany('ControlDeCalidad', [
             'foreignKey' => 'lote_id'

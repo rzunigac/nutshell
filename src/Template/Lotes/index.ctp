@@ -50,9 +50,9 @@
             <?php foreach ($lotes as $lote): ?>
             <tr>
                 <td><?= $this->Number->format($lote->id) ?></td>
-                <td><?= $lote->has('recepcion') ? $this->Html->link($lote->recepcion->id, ['controller' => 'Recepciones', 'action' => 'view', $lote->recepcion->id]) : '' ?></td>
-                <td><?= $lote->has('variedad') ? $this->Html->link($lote->variedad->idvariedades, ['controller' => 'Variedades', 'action' => 'view', $lote->variedad->idvariedades]) : '' ?></td>
-                <td><?= $lote->has('envase') ? $this->Html->link($lote->envase->id, ['controller' => 'Envases', 'action' => 'view', $lote->envase->id]) : '' ?></td>
+                <td><?= $lote->has('recepcion') ? $this->Html->link($lote->recepcion->guia_productor, ['controller' => 'Recepciones', 'action' => 'view', $lote->recepcion->id]) : '' ?></td>
+                <td><?= $lote->has('variedad') ? $this->Html->link($lote->variedad->nombre, ['controller' => 'Variedades', 'action' => 'view', $lote->variedad->idvariedades]) : '' ?></td>
+                <td><?= $lote->has('envase') ? $this->Html->link($lote->envase->nombre, ['controller' => 'Envases', 'action' => 'view', $lote->envase->id]) : '' ?></td>
                 <td><?= $this->Number->format($lote->cantidad) ?></td>
                 <td><?= $this->Number->format($lote->kg_neto) ?></td>
                 <td><?= $this->Number->format($lote->porcentaje_esperado_de_partido) ?></td>
