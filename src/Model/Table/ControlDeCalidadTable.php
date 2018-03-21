@@ -123,28 +123,28 @@ class ControlDeCalidadTable extends Table
             ->allowEmpty('di_reseca_leve');
 
         $validator
-            ->numeric('calibre_mayor36')
-            ->allowEmpty('calibre_mayor36');
+            ->numeric('calibre_mayor_36')
+            ->allowEmpty('calibre_mayor_36');
 
         $validator
-            ->numeric('calibre_34-36')
-            ->allowEmpty('calibre_34-36');
+            ->numeric('calibre_34_36')
+            ->allowEmpty('calibre_34_36');
 
         $validator
-            ->numeric('calibre_32-34')
-            ->allowEmpty('calibre_32-34');
+            ->numeric('calibre_32_34')
+            ->allowEmpty('calibre_32_34');
 
         $validator
-            ->numeric('calibre_30-32')
-            ->allowEmpty('calibre_30-32');
+            ->numeric('calibre_30_32')
+            ->allowEmpty('calibre_30_32');
 
         $validator
-            ->numeric('calibre_28-30')
-            ->allowEmpty('calibre_28-30');
+            ->numeric('calibre_28_30')
+            ->allowEmpty('calibre_28_30');
 
         $validator
-            ->numeric('calibre_menor28')
-            ->allowEmpty('calibre_menor28');
+            ->numeric('calibre_menor_28')
+            ->allowEmpty('calibre_menor_28');
 
         $validator
             ->numeric('humedad')

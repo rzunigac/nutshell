@@ -25,12 +25,12 @@ use Cake\ORM\Entity;
  * @property float $di_reseca_grave_vana
  * @property float $di_hongo_inactivo
  * @property float $di_reseca_leve
- * @property float $calibre_mayor36
- * @property float $calibre_34-36
- * @property float $calibre_32-34
- * @property float $calibre_30-32
- * @property float $calibre_28-30
- * @property float $calibre_menor28
+ * @property float $calibre_mayor_36
+ * @property float $calibre_34_36
+ * @property float $calibre_32_34
+ * @property float $calibre_30_32
+ * @property float $calibre_28_30
+ * @property float $calibre_menor_28
  * @property float $humedad
  *
  * @property \App\Model\Entity\Lote $lote
@@ -66,12 +66,12 @@ class ControlDeCalidad extends Entity
         'di_reseca_grave_vana' => true,
         'di_hongo_inactivo' => true,
         'di_reseca_leve' => true,
-        'calibre_mayor36' => true,
-        'calibre_34-36' => true,
-        'calibre_32-34' => true,
-        'calibre_30-32' => true,
-        'calibre_28-30' => true,
-        'calibre_menor28' => true,
+        'calibre_mayor_36' => true,
+        'calibre_34_36' => true,
+        'calibre_32_34' => true,
+        'calibre_30_32' => true,
+        'calibre_28_30' => true,
+        'calibre_menor_28' => true,
         'humedad' => true,
         'lote' => true
     ];

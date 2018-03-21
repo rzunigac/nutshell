@@ -36,12 +36,12 @@
                 <th scope="col"><?= $this->Paginator->sort('di_reseca_grave_vana') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('di_hongo_inactivo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('di_reseca_leve') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('calibre_mayor36') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('calibre_34-36') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('calibre_32-34') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('calibre_30-32') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('calibre_28-30') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('calibre_menor28') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('calibre_mayor_36') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('calibre_34_36') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('calibre_32_34') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('calibre_30_32') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('calibre_28_30') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('calibre_menor_28') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('humedad') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -68,12 +68,12 @@
                 <td><?= $this->Number->format($controlDeCalidad->di_reseca_grave_vana) ?></td>
                 <td><?= $this->Number->format($controlDeCalidad->di_hongo_inactivo) ?></td>
                 <td><?= $this->Number->format($controlDeCalidad->di_reseca_leve) ?></td>
-                <td><?= $this->Number->format($controlDeCalidad->calibre_mayor36) ?></td>
-                <td><?= $this->Number->format($controlDeCalidad->calibre_34-36) ?></td>
-                <td><?= $this->Number->format($controlDeCalidad->calibre_32-34) ?></td>
-                <td><?= $this->Number->format($controlDeCalidad->calibre_30-32) ?></td>
-                <td><?= $this->Number->format($controlDeCalidad->calibre_28-30) ?></td>
-                <td><?= $this->Number->format($controlDeCalidad->calibre_menor28) ?></td>
+                <td><?= $this->Number->format($controlDeCalidad->calibre_mayor_36) ?></td>
+                <td><?= $this->Number->format($controlDeCalidad->calibre_34_36) ?></td>
+                <td><?= $this->Number->format($controlDeCalidad->calibre_32_34) ?></td>
+                <td><?= $this->Number->format($controlDeCalidad->calibre_30_32) ?></td>
+                <td><?= $this->Number->format($controlDeCalidad->calibre_28_30) ?></td>
+                <td><?= $this->Number->format($controlDeCalidad->calibre_menor_28) ?></td>
                 <td><?= $this->Number->format($controlDeCalidad->humedad) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $controlDeCalidad->id]) ?>

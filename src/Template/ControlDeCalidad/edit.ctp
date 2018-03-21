@@ -41,12 +41,12 @@
             echo $this->Form->control('di_reseca_grave_vana');
             echo $this->Form->control('di_hongo_inactivo');
             echo $this->Form->control('di_reseca_leve');
-            echo $this->Form->control('calibre_mayor36');
-            echo $this->Form->control('calibre_34-36');
-            echo $this->Form->control('calibre_32-34');
-            echo $this->Form->control('calibre_30-32');
-            echo $this->Form->control('calibre_28-30');
-            echo $this->Form->control('calibre_menor28');
+            echo $this->Form->control('calibre_mayor_36');
+            echo $this->Form->control('calibre_34_36');
+            echo $this->Form->control('calibre_32_34');
+            echo $this->Form->control('calibre_30_32');
+            echo $this->Form->control('calibre_28_30');
+            echo $this->Form->control('calibre_menor_28');
             echo $this->Form->control('humedad');
         ?>
     </fieldset>

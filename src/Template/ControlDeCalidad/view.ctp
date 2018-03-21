@@ -95,28 +95,28 @@
             <td><?= $this->Number->format($controlDeCalidad->di_reseca_leve) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Calibre Mayor36') ?></th>
-            <td><?= $this->Number->format($controlDeCalidad->calibre_mayor36) ?></td>
+            <th scope="row"><?= __('Calibre Mayor 36') ?></th>
+            <td><?= $this->Number->format($controlDeCalidad->calibre_mayor_36) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Calibre 34-36') ?></th>
-            <td><?= $this->Number->format($controlDeCalidad->calibre_34-36) ?></td>
+            <th scope="row"><?= __('Calibre 34 36') ?></th>
+            <td><?= $this->Number->format($controlDeCalidad->calibre_34_36) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Calibre 32-34') ?></th>
-            <td><?= $this->Number->format($controlDeCalidad->calibre_32-34) ?></td>
+            <th scope="row"><?= __('Calibre 32 34') ?></th>
+            <td><?= $this->Number->format($controlDeCalidad->calibre_32_34) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Calibre 30-32') ?></th>
-            <td><?= $this->Number->format($controlDeCalidad->calibre_30-32) ?></td>
+            <th scope="row"><?= __('Calibre 30 32') ?></th>
+            <td><?= $this->Number->format($controlDeCalidad->calibre_30_32) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Calibre 28-30') ?></th>
-            <td><?= $this->Number->format($controlDeCalidad->calibre_28-30) ?></td>
+            <th scope="row"><?= __('Calibre 28 30') ?></th>
+            <td><?= $this->Number->format($controlDeCalidad->calibre_28_30) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Calibre Menor28') ?></th>
-            <td><?= $this->Number->format($controlDeCalidad->calibre_menor28) ?></td>
+            <th scope="row"><?= __('Calibre Menor 28') ?></th>
+            <td><?= $this->Number->format($controlDeCalidad->calibre_menor_28) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Humedad') ?></th>
