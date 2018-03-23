@@ -25,8 +25,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     
     <!-- Bootstrap -->
     <!-- Style -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" integrity="sha256-I/m6FhcACNYmRoqn1xUnizh6S7jOJsTq+aiJ6BtE2LE=" crossorigin="anonymous" />
     
     <title>
@@ -41,21 +41,35 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="#">Nutshell App</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Recepciones<span class="sr-only">(current)</span></a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRecepciones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Recepciones
+			</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownRecepciones">
+			  <? echo $this->Html->link('Recepciones',['controller' => 'recepciones', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <? echo $this->Html->link('Lotes',['controller' => 'lotes', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <? echo $this->Html->link('Control de Calidad',['controller' => 'control-de-calidad', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <? echo $this->Html->link('Ensacado',['controller' => 'ensacados', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			</div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPartido" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Partido
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownPartido">
+			  <? echo $this->Html->link('Despacho a Partido',['controller' => 'despacho-a-partidos', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <? echo $this->Html->link('Recepción de Partido',['controller' => 'recepcion-partidos', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			</div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Lotes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Partidos</a>
+            <a class="nav-link" href="#">Packing</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -63,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <a class="nav-link">Usuario: Rodrigo Zuñiga </a>
             </li>
             <li class="navbar-item">
-                <a class="nav-link" href="logout">Salir</a>
+                <? echo $this->Html->link('Salir',['controller' => 'usuarios', 'action' => 'logout'],['class' => 'nav-link']);?>
             </li>
         </ul>
       </div>
