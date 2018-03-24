@@ -81,7 +81,7 @@
                 echo $this->Form->control('observaciones');
             ?>
         </fieldset -->        
-        <?php echo $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']); ?>
+        <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']); ?>
         <?= $this->Form->end() ?>
         
         </div>

@@ -53,10 +53,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				Recepciones
 			</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownRecepciones">
-			  <? echo $this->Html->link('Recepciones',['controller' => 'recepciones', 'action' => 'index'],['class' => 'dropdown-item']);?>
-			  <? echo $this->Html->link('Lotes',['controller' => 'lotes', 'action' => 'index'],['class' => 'dropdown-item']);?>
-			  <? echo $this->Html->link('Control de Calidad',['controller' => 'control-de-calidad', 'action' => 'index'],['class' => 'dropdown-item']);?>
-			  <? echo $this->Html->link('Ensacado',['controller' => 'ensacados', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <?= $this->Html->link('Recepciones',['controller' => 'recepciones', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <?= $this->Html->link('Lotes',['controller' => 'lotes', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <?= $this->Html->link('Control de Calidad',['controller' => 'control-de-calidad', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <?= $this->Html->link('Ensacado',['controller' => 'ensacados', 'action' => 'index'],['class' => 'dropdown-item']);?>
 			</div>
           </li>
           <li class="nav-item dropdown">
@@ -64,8 +64,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				Partido
 			</a>
 			<div class="dropdown-menu" aria-labelledby="navbarDropdownPartido">
-			  <? echo $this->Html->link('Despacho a Partido',['controller' => 'despacho-a-partidos', 'action' => 'index'],['class' => 'dropdown-item']);?>
-			  <? echo $this->Html->link('Recepción de Partido',['controller' => 'recepcion-partidos', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <?= $this->Html->link('Despacho a Partido',['controller' => 'despacho-a-partidos', 'action' => 'index'],['class' => 'dropdown-item']);?>
+			  <?= $this->Html->link('Recepción de Partido',['controller' => 'recepcion-partidos', 'action' => 'index'],['class' => 'dropdown-item']);?>
 			</div>
           </li>
           <li class="nav-item">
@@ -77,7 +77,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <a class="nav-link">Usuario: Rodrigo Zuñiga </a>
             </li>
             <li class="navbar-item">
-                <? echo $this->Html->link('Salir',['controller' => 'usuarios', 'action' => 'logout'],['class' => 'nav-link']);?>
+                <?= $this->Html->link('Salir',['controller' => 'usuarios', 'action' => 'logout'],['class' => 'nav-link']);?>
             </li>
         </ul>
       </div>
